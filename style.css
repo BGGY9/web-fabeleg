@@ -1,0 +1,590 @@
+/* ==========================================================================
+   LANDING PAGE INDUSTRIAL NAVAL: FABRICACIONES ELÉCTRICAS GENERALES
+   PALETA DE COLORES REQUERIDA:
+   - Azul Marino (Fondo y Estructura Principal): #020d1e , #071731 , #0b2247
+   - Celeste / Sky (Energía y Acentos Tecnológicos): #00b4d8 , #38bdf8
+   - Amarillo (Llamados a la Acción y Alertas Eléctricas): #ffca28 , #eab308
+   ========================================================================== */
+
+/* RESET GENERAL Y COMPORTAMIENTO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #020d1e;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+/* HELPER CLASSES */
+.text-yellow { color: #ffca28; }
+.text-sky { color: #38bdf8; }
+.bg-yellow { background-color: #ffca28 !important; }
+
+/* HEADER / NAVEGACIÓN */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(2, 13, 30, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 2px solid #00b4d8;
+    box-shadow: 0 4px 30px rgba(0, 180, 216, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: #00b4d8;
+    animation: anchorSway 4s ease-in-out infinite;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.company-sub {
+    font-size: 12px;
+    font-weight: 600;
+    color: #38bdf8;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffca28;
+}
+
+.nav-whatsapp-btn {
+    background: #25d366;
+    color: #ffffff !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease !important;
+}
+
+.nav-whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    background: #20ba5a;
+}
+
+/* HERO SECTION CON FONDO REALISTA DE EMBARCACIONES PESQUERAS DEL PERÚ */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.hero-parallax-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://resetnaval.com/area-pesquera/');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(2, 13, 30, 0.95) 30%, rgba(11, 34, 71, 0.7) 100%);
+    z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 5;
+    max-width: 950px;
+    text-align: center;
+    animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(0, 180, 216, 0.15);
+    color: #38bdf8;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.hero-title {
+    font-size: 54px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* BOTONERÍA */
+.btn-main-sky {
+    background: #00b4d8;
+    color: #020d1e;
+    padding: 16px 36px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid #00b4d8;
+    transition: all 0.3s ease;
+}
+
+.btn-main-sky:hover {
+    background: transparent;
+    color: #00b4d8;
+    box-shadow: 0 0 25px rgba(0, 180, 216, 0.5);
+}
+
+.btn-main-whatsapp {
+    background: #25d366;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-main-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.hero-wave-separator {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; line-height: 0; z-index: 4;
+}
+
+/* CONTENEDORES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tagline {
+    font-size: 13px;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-main-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #00b4d8;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* SECCIÓN IDENTIDAD CORPORATIVA */
+.identity-section {
+    padding: 120px 0;
+    background-color: #020d1e;
+}
+
+.identity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.identity-card {
+    background: #071731;
+    padding: 45px 35px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 180, 216, 0.1);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+}
+
+.identity-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 202, 40, 0.3);
+}
+
+.card-border-glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.identity-icon-box {
+    width: 65px;
+    height: 65px;
+    background: rgba(0, 180, 216, 0.15);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #00b4d8;
+    margin-bottom: 25px;
+}
+
+.identity-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.identity-card p {
+    font-size: 15.5px;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.full-width-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #071731 0%, #0b2247 100%);
+    border-left: 5px solid #ffca28;
+}
+
+.policy-layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.policy-text h3 {
+    margin-bottom: 12px;
+}
+
+/* SECCIÓN SERVICIOS */
+.services-section {
+    padding: 120px 0;
+    background-color: #071731;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #020d1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.02);
+    transition: all 0.4s ease;
+}
+
+.service-image-mask {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    filter: brightness(0.4) grayscale(0.2);
+    border-bottom: 3px solid #00b4d8;
+    transition: filter 0.3s ease;
+}
+
+/* Texturas de ingeniería mediante recursos libres */
+.mask-rotativas { background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'); }
+.mask-estaticas { background-image: url('https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=600&q=80'); }
+.mask-transformadores { background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80'); }
+.mask-pruebas { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80'); }
+
+.service-card:hover .service-image-mask {
+    filter: brightness(0.7) grayscale(0);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 180, 216, 0.15);
+    border-color: rgba(0, 180, 216, 0.2);
+}
+
+.service-card-content {
+    padding: 30px 25px;
+    position: relative;
+}
+
+.service-icon-circle {
+    width: 55px;
+    height: 55px;
+    background: #071731;
+    border: 2px solid #00b4d8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #38bdf8;
+    position: absolute;
+    top: -28px;
+    left: 25px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-circle {
+    background: #ffca28;
+    border-color: #ffca28;
+    color: #020d1e;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    color: #ffffff;
+    margin: 10px 0 15px 0;
+}
+
+.service-card p {
+    font-size: 14.5px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.spec-list {
+    list-style: none;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 15px;
+}
+
+.spec-list li {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spec-list li i {
+    color: #38bdf8;
+    font-size: 12px;
+}
+
+/* ANIMACIONES DE ICONOS AL HOVER EN TARJETAS */
+.service-card:hover .icon-spin {
+    animation: constantRotation 2.5s linear infinite;
+}
+
+.service-card:hover .icon-pulse {
+    animation: lightPulse 1.4s ease-in-out infinite;
+}
+
+/* CALL TO ACTION MARÍTIMO DE ALTA CONVERSIÓN */
+.peruvian-fleet-cta {
+    position: relative;
+    padding: 120px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-parallax-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(2, 13, 30, 0.95), rgba(2, 13, 30, 0.85));
+    z-index: 2;
+}
+
+.cta-container-box {
+    position: relative;
+    z-index: 5;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.cta-container-box h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.cta-container-box p {
+    font-size: 17px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.btn-giant-whatsapp {
+    background: #25d366;
+    color: #ffffff;
+    padding: 22px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-giant-whatsapp:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+}
+
+/* FOOTER MARÍTIMO */
+.industrial-footer {
+    background: #010813;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(0, 180, 216, 0.15);
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info h4 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.footer-info p, .footer-copy p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* MEDIA QUERIES (RESPONSIVO EN SMARTPHONES) */
+@media (max-width: 768px) {
+    .main-header { padding: 15px 20px; }
+    .nav-menu { display: none; } /* Oculta navegación en móviles para forzar la conversión directa por botones */
+    .hero-title { font-size: 34px; }
+    .identity-grid { grid-template-columns: 1fr; }
+    .policy-layout { flex-direction: column; gap: 15px; }
+    .full-width-card { grid-column: auto; }
+    .cta-container-box h2 { font-size: 26px; }
+    .btn-giant-whatsapp { font-size: 15px; padding: 18px 25px; }
+    .footer-layout { flex-direction: column; text-align: center; }
+}
+
+/* ANIMACIONES KEYFRAMES NATIVAS (CSS) */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.97) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes anchorSway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg) translateY(-2px); }
+}
+
+@keyframes constantRotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes lightPulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); color: #ffca28; text-shadow: 0 0 10px #ffca28; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes waveFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.animate-floating {
+    animation: waveFloat 3s ease-in-out infinite;
+}
