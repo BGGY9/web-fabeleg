@@ -123,7 +123,7 @@ body {
 .hero-parallax-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('https://resetnaval.com/area-pesquera/');
+    background-image: url('https://cdn.pixabay.com/photo/2022/08/26/14/31/bay-7412651_1280.jpg');
     background-size: cover;
     background-position: center;
     transform: scale(1.05);
@@ -369,10 +369,10 @@ body {
 }
 
 /* Texturas de ingeniería mediante recursos libres */
-.mask-rotativas { background-image: url(''https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd8_zlURH0BModjXzBtYvG_7G4Q10JTYDDp16Iq6Ejp27SFedXMhVpoHE&s=10'); }
-.mask-estaticas { background-image: url('https://emenasa.com/img/instalaciones-electricas-buques/intro02.jpg'); }
+.mask-rotativas { background-image: url('https://cdn.pixabay.com/photo/2023/04/06/09/19/motor-7903404_1280.jpg'); }
+.mask-estaticas { background-image: url('https://cdn.pixabay.com/photo/2021/12/22/21/48/submarine-6888294_1280.jpg'); }
 .mask-transformadores { background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80'); }
-.mask-pruebas { background-image: url('https://www.megger.com/sites/g/files/utfabz201/files/styles/megger_square/public/acquiadam_assets/2023-01/BakerDX_WEBI_001.png.webp?itok=V8AEv5YUgu'); }
+.mask-pruebas { background-image: url('https://cdn.pixabay.com/photo/2015/12/07/10/53/electrician-1080573_1280.jpg'); }
 
 .service-card:hover .service-image-mask {
     filter: brightness(0.7) grayscale(0);
@@ -465,7 +465,7 @@ body {
 .cta-parallax-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/15/20/27/switchgear-2069758_1280.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -547,15 +547,70 @@ body {
 
 /* MEDIA QUERIES (RESPONSIVO EN SMARTPHONES) */
 @media (max-width: 768px) {
-    .main-header { padding: 15px 20px; }
-    .nav-menu { display: none; } /* Oculta navegación en móviles para forzar la conversión directa por botones */
-    .hero-title { font-size: 34px; }
-    .identity-grid { grid-template-columns: 1fr; }
-    .policy-layout { flex-direction: column; gap: 15px; }
-    .full-width-card { grid-column: auto; }
-    .cta-container-box h2 { font-size: 26px; }
-    .btn-giant-whatsapp { font-size: 15px; padding: 18px 25px; }
-    .footer-layout { flex-direction: column; text-align: center; }
+    .main-header { 
+        padding: 15px 20px; 
+        flex-direction: column; /* Alinea el título y el menú de forma vertical */
+        gap: 15px;
+        position: relative; /* Evita que tape demasiado contenido fijo en móviles si crece */
+    }
+    
+    .logo {
+        justify-content: center; /* Centra el icono y texto del logo */
+        width: 100%;
+    }
+
+    .logo-text {
+        text-align: center; /* Centra los textos del nombre de la empresa */
+    }
+    
+    .nav-menu { 
+        display: flex; /* CAMBIO: Volvemos a mostrar el menú en móviles */
+        flex-wrap: wrap; /* Si son muchos elementos, saltan de línea ordenadamente */
+        justify-content: center; /* Centra los enlaces debajo del título */
+        gap: 15px;
+        width: 100%;
+    } 
+
+    .nav-menu a {
+        font-size: 14px; /* Un toque más pequeño para pantallas compactas */
+    }
+    
+    .hero-title { 
+        font-size: 34px; 
+        line-height: 1.2; 
+    }
+    
+    .identity-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+    
+    .policy-layout { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .full-width-card { 
+        grid-column: auto; 
+    }
+    
+    .cta-container-box h2 { 
+        font-size: 26px; 
+    }
+    
+    .btn-giant-whatsapp { 
+        font-size: 15px; 
+        padding: 18px 25px; 
+        display: inline-block; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    .footer-layout { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 10px;
+    }
 }
 
 /* ANIMACIONES KEYFRAMES NATIVAS (CSS) */
